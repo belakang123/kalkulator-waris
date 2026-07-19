@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white antialiased selection:bg-neonGreen/30 select-none;
+  }
+
+  input, textarea, [contenteditable="true"] {
+    @apply select-text;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Utility */
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/[0.03] border border-white/10 shadow-[0_8px_32px_rgba(80,255,176,0.05)];
+  }
+
+  /* Neon Glow Utils */
+  .glow-green {
+    @apply shadow-[0_0_20px_rgba(80,255,176,0.3)];
+  }
+  
+  .glow-blue {
+    @apply shadow-[0_0_20px_rgba(0,225,255,0.3)];
+  }
+}
